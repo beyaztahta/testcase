@@ -28,7 +28,7 @@ public class TestBase {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
-//        driver.get("http://automationexercise.com");
+
     }
 
     @After
@@ -45,6 +45,12 @@ public class TestBase {
         Select option = new Select(dropdown);
         option.selectByVisibleText(myOption);
         return option.getFirstSelectedOption();
+    }
+
+    public WebElement getWebElementWithXpath(String xpath) {
+
+      return  driver.findElement(By.xpath(xpath));
+
     }
 
 }
