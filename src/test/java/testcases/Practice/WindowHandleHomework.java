@@ -3,7 +3,8 @@ package testcases.Practice;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import utilities.TestBase;
+import testcases.TestBase;
+
 
 import java.util.Set;
 

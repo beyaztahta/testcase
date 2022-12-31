@@ -5,14 +5,16 @@ import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
 public class TestBase {
 
-    WebDriver driver;
+   protected static WebDriver driver;
 
     @Before
     public void setUp() {
@@ -26,7 +28,7 @@ public class TestBase {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
-        driver.get("http://automationexercise.com");
+//        driver.get("http://automationexercise.com");
     }
 
     @After
@@ -37,4 +39,12 @@ public class TestBase {
         driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);
         driver.quit();
     }
+
+
+    public WebElement selectFromDropdown(WebElement dropdown, String myOption) {
+        Select option = new Select(dropdown);
+        option.selectByVisibleText(myOption);
+        return option.getFirstSelectedOption();
+    }
+
 }
