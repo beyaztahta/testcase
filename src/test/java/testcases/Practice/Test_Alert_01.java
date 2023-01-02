@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import testcases.TestBase;
+import utilities.TestBase;
 
 
 public class Test_Alert_01 extends TestBase {

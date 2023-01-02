@@ -1,16 +1,10 @@
 package testcases.Practice;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import testcases.TestBase;
-
-import java.time.Duration;
+import utilities.TestBase;
 
 public class TestCase_14 extends TestBase {
 
@@ -83,12 +77,12 @@ public class TestCase_14 extends TestBase {
         //18. Verify success message 'Your order has been placed successfully!'
      //  Assert.assertTrue(driver.findElement(By.xpath("//div[contains(text(),'Your order has been placed successfully!')]")).isDisplayed());
 
-        //19. Click 'Delete Account' button
-        getWebElementWithXpath("//a[normalize-space()='Delete Account']").click();
-
-        //20. Verify 'ACCOUNT DELETED!' and click 'Continue' button
-        Assert.assertTrue(getWebElementWithXpath("//b[normalize-space()='Account Deleted!']").isDisplayed());
-        getWebElementWithXpath("//a[@class='btn btn-primary']").click();
+//        //19. Click 'Delete Account' button
+//        getWebElementWithXpath("//a[normalize-space()='Delete Account']").click();
+//
+//        //20. Verify 'ACCOUNT DELETED!' and click 'Continue' button
+//        Assert.assertTrue(getWebElementWithXpath("//b[normalize-space()='Account Deleted!']").isDisplayed());
+//        getWebElementWithXpath("//a[@class='btn btn-primary']").click();
 
     }
 

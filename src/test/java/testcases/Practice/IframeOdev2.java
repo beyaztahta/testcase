@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import testcases.TestBase;
+import utilities.TestBase;
 
 import java.util.List;
 
