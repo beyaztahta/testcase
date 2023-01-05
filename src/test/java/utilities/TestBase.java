@@ -20,12 +20,13 @@ public class TestBase {
     public void setUp() {
         //    1. Launch browser
         //    2. Navigate to url 'http://automationexercise.com'
-        ChromeOptions options = new ChromeOptions();
+       // ChromeOptions options = new ChromeOptions();
         //https://chrome//version/
-        String path = "C:\\Users\\hp\\AppData\\Local\\Google\\Chrome\\User Data";
-        options.addArguments("user-data-dir=" + path);
-        options.addArguments("profile-directory=Profile 3");
-        driver = new ChromeDriver(options);
+//        String path = "C:\\Users\\hp\\AppData\\Local\\Google\\Chrome\\User Data";
+//        options.addArguments("user-data-dir=" + path);
+//        options.addArguments("profile-directory=Profile 3");
+//        driver = new ChromeDriver(options);
+        driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
 
@@ -34,10 +35,10 @@ public class TestBase {
     @After
     public void tearDown() throws InterruptedException {
         //Her seferinde cikis yapmadan once gecmisi silmemiz gerekiyor.
-        driver.manage().deleteAllCookies();
-        driver.get("chrome://settings/clearBrowserData");
-        driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);
-        driver.quit();
+//        driver.manage().deleteAllCookies();
+//        driver.get("chrome://settings/clearBrowserData");
+//        driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);
+          driver.quit();
     }
 
 
